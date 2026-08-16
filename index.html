@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bernardo Lopes | Portfolio</title>
-  <meta name="description" content="Portfolio de Bernardo Lopes, estudante de Engenharia de Software com foco em backend, web e automacao.">
+  <title>Bernardo Augusto | Portfolio</title>
+  <meta name="description" content="Portfolio de Bernardo Augusto, estudante de Engenharia de Software com foco em backend, web e automacao.">
   <meta name="theme-color" content="#0b0d16">
-  <meta property="og:title" content="Bernardo Lopes | Portfolio">
-  <meta property="og:description" content="Projetos, curriculo e contato de Bernardo Lopes.">
+  <meta property="og:title" content="Bernardo Augusto | Portfolio">
+  <meta property="og:description" content="Projetos, curriculo e contato de Bernardo Augusto.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
 
@@ -22,7 +22,7 @@
 
   <header class="site-header">
     <nav class="navbar" aria-label="Navegacao principal">
-      <a class="brand" href="#home">
+      <a class="brand" href="#home" aria-label="Inicio">
         <span>Bernardo</span><strong>.dev</strong>
       </a>
 
@@ -37,11 +37,13 @@
         <a href="#about">Sobre</a>
         <a href="#services">Servicos</a>
         <a href="#projects">Projetos</a>
+        <a href="#experience">Experiencias</a>
         <a href="#cv">Curriculo</a>
         <a href="#contact">Contato</a>
       </div>
 
       <div class="nav-actions">
+        <div class="language-toggle" role="group" aria-label="Selecionar idioma"><button type="button" class="language-option active" data-language="pt-BR">PT-BR</button><button type="button" class="language-option" data-language="en-US">EN-US</button></div>
         <button class="theme-toggle" type="button" aria-label="Alternar tema">
           <i class="fa-solid fa-sun" aria-hidden="true"></i>
         </button>
@@ -56,24 +58,19 @@
     <section id="home" class="hero">
       <div class="hero-shell">
         <div class="hero-photo-wrap">
-          <div class="photo-shape"></div>
-          <img class="hero-photo" src="bernardo-profile.png" alt="Foto de Bernardo Lopes">
-          <div class="work-badge">
-            <strong>Aberto a oportunidades</strong>
-            <span>Estagio, junior e projetos</span>
-          </div>
+          <img class="hero-photo" src="./bernardo-profile.png" alt="Foto de Bernardo Augusto">
         </div>
 
         <div class="hero-copy">
-          <p class="hello">Hello, I am 👋</p>
-          <h1>Bernardo Lopes</h1>
+          <p class="hello">Ola, eu sou</p>
+          <h1>Bernardo Augusto</h1>
           <p class="role">Estudante de Engenharia de Software</p>
           <p class="summary">
-            Foco em backend, aplicacoes web e automacao. Desenvolvo projetos com Java, Spring Boot, TypeScript, React, PostgreSQL, Firebase e n8n.
+            Atuo como Engenheiro de Dados na Ambientar, desenvolvendo projetos reais de software, solucoes de dados e automacoes com foco em clareza, organizacao e impacto no processo.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Contato <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            <a class="btn btn-light" href="#projects">Meu portfolio <i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+            <a class="btn btn-primary" href="#contact">Entrar em contato <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="btn btn-light" href="#projects">Ver projetos <i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
           </div>
         </div>
 
@@ -89,15 +86,21 @@
       <div class="container two-col">
         <div>
           <p class="section-kicker">Sobre mim</p>
-          <h2>Perfil profissional claro, tecnico e em evolucao.</h2>
+          <h2>Perfil profissional em evolucao, com foco em tecnologia aplicada.</h2>
         </div>
         <div class="about-text">
-          <p>
-            Sou estudante de Engenharia de Software na PUC Minas, com interesse em desenvolvimento backend, aplicacoes web e automacao de processos. Procuro construir solucoes organizadas, documentadas e uteis para problemas reais.
-          </p>
-          <p>
-            Tenho vivencia com suporte, dados, relatorios e automacao, alem de projetos academicos e pessoais usando Java, Spring Boot, TypeScript, React, PostgreSQL, Firebase e n8n.
-          </p>
+          <article class="language-card">
+            <span>PT-BR</span>
+            <p>
+              Sou estudante de Engenharia de Software na PUC Minas e trabalho como Engenheiro de Dados na Ambientar desde maio de 2025. Atuo em projetos reais de software, criacao de pipelines, organizacao de bases, dashboards, automacoes e analise de dados para apoiar decisoes.
+            </p>
+          </article>
+          <article class="language-card">
+            <span>EN-US</span>
+            <p>
+              I am a Software Engineering student at PUC Minas and I have been working as a Data Engineer at Ambientar since May 2025. I work on real software projects, data pipelines, database organization, dashboards, automations and data analysis to support decisions.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -105,7 +108,8 @@
     <section id="services" class="section services">
       <div class="container">
         <div class="section-title-center">
-          <h2>Meus Servicos</h2>
+          <p class="section-kicker">Atuacao</p>
+          <h2>Servicos e habilidades</h2>
           <span></span>
         </div>
 
@@ -118,7 +122,7 @@
           <article class="service-card accent-card">
             <div class="service-icon"><i class="fa-solid fa-window-maximize"></i></div>
             <h3>Web</h3>
-            <p>Interfaces responsivas com HTML, CSS, JavaScript, TypeScript e React, com foco em clareza e usabilidade.</p>
+            <p>Interfaces responsivas com HTML, CSS, JavaScript, TypeScript e React, priorizando usabilidade e leitura.</p>
           </article>
           <article class="service-card dark-card">
             <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
@@ -133,53 +137,50 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Portfolio</p>
-            <h2>Projetos selecionados</h2>
+            <p class="section-kicker">GitHub</p>
+            <h2>Repositorios em movimento</h2>
+            <p class="section-intro">Carrossel atualizado automaticamente com meus repositorios publicos mais recentes.</p>
           </div>
-          <a class="btn btn-outline" href="https://github.com/BernardoApl?tab=repositories" target="_blank" rel="noopener">Ver GitHub</a>
+          <a class="btn btn-outline" href="https://github.com/BernardoApl?tab=repositories" target="_blank" rel="noopener">Ver todos no GitHub</a>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <span class="project-number">01</span>
-            <h3>Sistema Pesque e Pague</h3>
-            <p>Plataforma para gestao de estoque, vendas, reservas, aluguel de equipamentos e relatorios financeiros.</p>
-            <div class="tags">
-              <span>TypeScript</span><span>React</span><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span>
+        <div class="repo-box github-repo-showcase">
+          <div class="repo-carousel-viewport" aria-label="Carrossel infinito de repositorios do GitHub">
+            <div id="projects-container" class="repo-carousel-track" aria-live="polite">
+              <p class="empty-state" id="projects-placeholder">Carregando repositorios do GitHub...</p>
             </div>
-            <a href="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti2-3740100-pesque-e-pague" target="_blank" rel="noopener">Abrir projeto</a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-number">02</span>
-            <h3>Calculo de Folha</h3>
-            <p>Sistema para calcular salarios, adicionais, beneficios, descontos legais e relatorios de folha.</p>
-            <div class="tags">
-              <span>Java</span><span>Spring Boot</span><span>React</span><span>TypeScript</span>
-            </div>
-            <a href="https://github.com/pm-puc-minas/calculo-folha-pagamento-lab-1-grupo-1" target="_blank" rel="noopener">Abrir projeto</a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-number">03</span>
-            <h3>CarExpress</h3>
-            <p>Sistema de gerenciamento de veiculos com cadastro, consulta, atualizacao e remocao de registros.</p>
-            <div class="tags">
-              <span>TypeScript</span><span>JavaScript</span><span>CSS</span>
-            </div>
-            <a href="https://github.com/BernardoApl/CarExpress" target="_blank" rel="noopener">Abrir projeto</a>
-          </article>
+          </div>
         </div>
+      </div>
+    </section>
+    <section id="experience" class="section experience">
+      <div class="container two-col">
+        <div>
+          <p class="section-kicker">Experiencias</p>
+          <h2>Vivencias academicas, tecnicas e profissionais.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item current-job">
+            <span>Maio 2025 - Atual</span>
+            <h3>Ambientar</h3>
+            <p><strong>Engenheiro de Dados</strong> - Desenvolvimento de projetos reais de software e solucoes de dados. Atuacao com pipelines e integracoes de dados, modelagem e organizacao de bases, dashboards e indicadores, qualidade dos dados e automacoes para melhorar processos internos.</p>
+          </article>
 
-        <div class="repo-box">
-          <div>
-            <h3>Repositorios recentes</h3>
-            <p>Uma selecao curta carregada automaticamente do GitHub.</p>
-          </div>
-          <div id="projects-container" class="repo-grid" aria-live="polite">
-            <p class="empty-state" id="projects-placeholder">Carregando projetos do GitHub...</p>
-          </div>
-          <button id="load-more-projects" class="btn btn-outline" type="button">Mostrar mais</button>
+          <article class="timeline-item">
+            <span>2026 - Atual</span>
+            <h3>PUC Minas</h3>
+            <p><strong>Engenharia de Software</strong> - Desenvolvimento de projetos academicos, praticas de laboratorio, modelagem, front-end, backend e testes.</p>
+          </article>
+          <article class="timeline-item">
+            <span>Projetos academicos</span>
+            <h3>Desenvolvimento Web e Backend</h3>
+            <p>Participacao em sistemas com React, TypeScript, Java, Spring Boot e PostgreSQL, com foco em organizacao de codigo e entrega funcional.</p>
+          </article>
+          <article class="timeline-item">
+            <span>Automacao e dados</span>
+            <h3>Processos e Relatorios</h3>
+            <p>Experiencia com organizacao de dados, relatorios, Excel, Power BI e automacoes para diminuir tarefas repetitivas.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -188,7 +189,7 @@
       <div class="container cv-layout">
         <div class="cv-copy">
           <p class="section-kicker">Curriculo</p>
-          <h2>PDF dentro do site, pronto para visualizar e baixar.</h2>
+          <h2>Curriculo em PDF para visualizar e baixar.</h2>
           <p>Escolha a versao PT-BR ou EN-US e confira o curriculo diretamente na pagina.</p>
           <div class="cv-controls" role="group" aria-label="Selecionar idioma do curriculo">
             <button type="button" class="cv-lang-btn active" data-cv-file="CV_main_PT-BR.pdf">PT-BR</button>
@@ -244,7 +245,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span>© 2026 Bernardo Lopes. Todos os direitos reservados.</span>
+      <span>© 2026 Bernardo Augusto. Todos os direitos reservados.</span>
       <a href="#home">Voltar ao topo</a>
     </div>
   </footer>
@@ -252,3 +253,7 @@
   <script src="script.js" defer></script>
 </body>
 </html>
+
+
+
+
