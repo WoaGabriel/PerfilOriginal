@@ -1,10 +1,12 @@
-﻿# Portfolio - Bernardo Augusto
+from pathlib import Path
 
-Portfolio profissional desenvolvido para a disciplina de Projeto de Software / Laboratorio de Desenvolvimento de Software.
+content = """# Portfólio - Bernardo Augusto
+
+Portfólio profissional desenvolvido para a disciplina de **Projeto de Software / Laboratório de Desenvolvimento de Software**.
 
 ## Sobre o projeto
 
-O site apresenta o perfil profissional de Bernardo Augusto, com secoes de apresentacao, servicos, projetos, experiencias, curriculo e contato.
+O site apresenta o perfil profissional de **Bernardo Augusto**, com seções de apresentação, serviços, projetos, experiências, currículo e contato.
 
 ## Tecnologias utilizadas
 
@@ -13,19 +15,19 @@ O site apresenta o perfil profissional de Bernardo Augusto, com secoes de aprese
 - JavaScript
 - Font Awesome
 - Google Fonts
-- GitHub API para listar repositorios recentes
+- GitHub API para listar repositórios recentes
 
 ## Funcionalidades
 
 - Layout responsivo para desktop, tablet e celular
 - Menu mobile
-- Alternancia entre tema claro e escuro
-- Secao Sobre Mim em portugues e ingles
-- Carrossel automatico de projetos selecionados
-- Listagem de repositorios recentes do GitHub
-- Secao de experiencias
-- Visualizacao e download do curriculo em PT-BR e EN-US
-- Formulario de contato com envio por `mailto`
+- Alternância entre tema claro e escuro
+- Seção **Sobre Mim** em português e inglês
+- Carrossel automático de projetos selecionados
+- Listagem de repositórios recentes do GitHub
+- Seção de experiências
+- Visualização e download do currículo em PT-BR e EN-US
+- Formulário de contato com envio por `mailto`
 
 ## Estrutura de arquivos
 
@@ -37,14 +39,3 @@ O site apresenta o perfil profissional de Bernardo Augusto, com secoes de aprese
 ├── CV_main_PT-BR.pdf
 ├── CV_main_EN-US.pdf
 └── README.md
-```
-
-## Como executar localmente
-
-Abra o arquivo `index.html` no navegador.
-
-Opcionalmente, use uma extensao como Live Server no VS Code para testar com recarregamento automatico.
-
-## Link publicado
-
-Adicionar aqui o link do site quando fizer o deploy.
