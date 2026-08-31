@@ -27,7 +27,7 @@ O site apresenta o perfil profissional de **Bernardo Augusto**, com seções de 
 - Listagem de repositórios recentes do GitHub
 - Seção de experiências
 - Visualização e download do currículo em PT-BR e EN-US
-- Formulário de contato com envio por `mailto`
+- Formulário de contato com envio direto via AJAX
 
 ## Estrutura de arquivos
 

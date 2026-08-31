@@ -1,5 +1,6 @@
 (() => {
   const GH_ENDPOINT = "https://api.github.com/users/BernardoApl/repos?sort=updated&per_page=100";
+  const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/b.lopes.software@gmail.com";
   const MAX_REPOS = 20;
   const THEME_KEY = "bernardoPortfolioTheme";
   const LANGUAGE_KEY = "bernardoPortfolioLanguage";
@@ -385,25 +386,79 @@
   function initContactForm() {
     const form = qs("#contact-form");
     const feedback = qs("#contact-feedback");
+    const submitButton = form?.querySelector('button[type="submit"]');
     if (!form) return;
 
-    form.addEventListener("submit", (event) => {
+    const feedbackMessages = {
+      "pt-BR": {
+        required: "Preencha todos os campos antes de enviar.",
+        sending: "Enviando mensagem...",
+        success: "Mensagem enviada com sucesso. Obrigado pelo contato!",
+        error: "Nao foi possivel enviar agora. Tente novamente em alguns instantes."
+      },
+      "en-US": {
+        required: "Fill in every field before sending.",
+        sending: "Sending message...",
+        success: "Message sent successfully. Thanks for reaching out!",
+        error: "The message could not be sent right now. Try again in a moment."
+      }
+    };
+
+    const getMessages = () => feedbackMessages[document.documentElement.lang] || feedbackMessages["pt-BR"];
+    const setFeedback = (message, state = "") => {
+      if (!feedback) return;
+      feedback.textContent = message;
+      feedback.dataset.state = state;
+    };
+    const setSubmitting = (isSubmitting) => {
+      if (!submitButton) return;
+      submitButton.disabled = isSubmitting;
+      submitButton.setAttribute("aria-busy", String(isSubmitting));
+    };
+
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const name = qs("#name")?.value.trim();
-      const email = qs("#email")?.value.trim();
-      const message = qs("#message")?.value.trim();
+      const messages = getMessages();
+      const name = form.elements.namedItem("name")?.value.trim();
+      const email = form.elements.namedItem("email")?.value.trim();
+      const message = form.elements.namedItem("message")?.value.trim();
 
       if (!name || !email || !message) {
-        if (feedback) feedback.textContent = "Preencha todos os campos antes de enviar.";
+        setFeedback(messages.required, "error");
         return;
       }
 
-      const subject = encodeURIComponent("Contato pelo portfolio");
-      const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\n${message}`);
-      window.location.href = `mailto:b.lopes.software@gmail.com?subject=${subject}&body=${body}`;
+      setSubmitting(true);
+      setFeedback(messages.sending);
 
-      if (feedback) feedback.textContent = "Abrindo seu aplicativo de email...";
-      form.reset();
+      try {
+        const response = await fetch(CONTACT_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            message,
+            _replyto: email,
+            _subject: "Contato pelo portfolio",
+            _template: "table",
+            _captcha: "false"
+          })
+        });
+
+        if (!response.ok) throw new Error("Contact request failed");
+
+        setFeedback(messages.success, "success");
+        form.reset();
+      } catch (error) {
+        console.warn("Erro ao enviar contato:", error);
+        setFeedback(messages.error, "error");
+      } finally {
+        setSubmitting(false);
+      }
     });
   }
 

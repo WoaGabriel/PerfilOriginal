@@ -856,6 +856,22 @@ p {
   color: var(--page-muted);
 }
 
+.form-feedback[data-state="success"] {
+  color: #1f8a4c;
+  font-weight: 800;
+}
+
+.form-feedback[data-state="error"] {
+  color: #c73826;
+  font-weight: 800;
+}
+
+.contact-form button[disabled] {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
 .footer {
   padding: 26px 0;
   background: var(--bg);
