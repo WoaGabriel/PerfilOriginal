@@ -1,252 +1,430 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bernardo Augusto | Portfolio</title>
-  <meta name="description" content="Portfolio de Bernardo Augusto, estudante de Engenharia de Software com foco em backend, web e automacao.">
-  <meta name="theme-color" content="#0b0d16">
-  <meta property="og:title" content="Bernardo Augusto | Portfolio">
-  <meta property="og:description" content="Projetos, curriculo e contato de Bernardo Augusto.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Gabriel | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio de Joao Gabriel, estudante de Engenharia de Software com interesse em Machine Learning, Dados e Nuvem."
+    />
+    <meta name="theme-color" content="#0b0d16" />
+    <meta property="og:title" content="João Gabriel | Portfolio" />
+    <meta
+      property="og:description"
+      content="Projetos, curriculo e contato de Joao Gabriel."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <a href="#home" class="skip-link">Pular para o conteudo</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <a href="#home" class="skip-link">Pular para o conteudo</a>
 
-  <header class="site-header">
-    <nav class="navbar" aria-label="Navegacao principal">
-      <a class="brand" href="#home" aria-label="Inicio">
-        <span>Bernardo</span><strong>.dev</strong>
-      </a>
-
-      <button class="menu-toggle" type="button" aria-controls="nav-items" aria-expanded="false" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="nav-items" id="nav-items">
-        <a href="#home">Home</a>
-        <a href="#about">Sobre</a>
-        <a href="#services">Servicos</a>
-        <a href="#projects">Projetos</a>
-        <a href="#experience">Experiencias</a>
-        <a href="#cv">Curriculo</a>
-        <a href="#contact">Contato</a>
-      </div>
-
-      <div class="nav-actions">
-        <div class="language-toggle" role="group" aria-label="Selecionar idioma"><button type="button" class="language-option active" data-language="pt-BR">PT-BR</button><button type="button" class="language-option" data-language="en-US">EN-US</button></div>
-        <button class="theme-toggle" type="button" aria-label="Alternar tema">
-          <i class="fa-solid fa-sun" aria-hidden="true"></i>
-        </button>
-        <a class="nav-download" href="CV_main_PT-BR.pdf" download aria-label="Baixar curriculo">
-          <i class="fa-solid fa-download" aria-hidden="true"></i>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegacao principal">
+        <a class="brand" href="#home" aria-label="Inicio">
+          <span>João</span><strong>.dev</strong>
         </a>
-      </div>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-shell">
-        <div class="hero-photo-wrap">
-          <img class="hero-photo" src="./bernardo-profile.png" alt="Foto de Bernardo Augusto">
-        </div>
-
-        <div class="hero-copy">
-          <p class="hello">Ola, eu sou</p>
-          <h1>Bernardo Augusto</h1>
-          <p class="role">Estudante de Engenharia de Software</p>
-          <p class="summary">
-            Atuo como Engenheiro de Dados na Ambientar, desenvolvendo projetos reais de software, solucoes de dados e automacoes com foco em clareza, organizacao e impacto no processo.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Entrar em contato <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            <a class="btn btn-light" href="#projects">Ver projetos <i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
-          </div>
-        </div>
-
-        <div class="social-rail" aria-label="Links sociais">
-          <a href="mailto:b.lopes.software@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://github.com/BernardoApl" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/bernardo-lopes-3500b92b6/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="container two-col">
-        <div>
-          <p class="section-kicker">Sobre mim</p>
-          <h2>Perfil profissional em evolucao, com foco em tecnologia aplicada.</h2>
-        </div>
-        <div class="about-text">
-          <article class="about-card">
-            <p id="about-description">
-              Sou estudante de Engenharia de Software na PUC Minas e trabalho como Engenheiro de Dados na Ambientar desde maio de 2025. Atuo em projetos reais de software, criacao de pipelines, organizacao de bases, dashboards, automacoes e analise de dados para apoiar decisoes.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section services">
-      <div class="container">
-        <div class="section-title-center">
-          <p class="section-kicker">Atuacao</p>
-          <h2>Servicos e habilidades</h2>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="nav-items"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
           <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-items" id="nav-items">
+          <a href="#home">Home</a>
+          <a href="#about">Sobre</a>
+          <a href="#services">Servicos</a>
+          <a href="#projects">Projetos</a>
+          <a href="#experience">Experiencias</a>
+          <a href="#cv">Curriculo</a>
+          <a href="#contact">Contato</a>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card dark-card">
-            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-            <h3>Backend</h3>
-            <p>APIs, regras de negocio, integracao com banco de dados e organizacao de sistemas usando Java e Spring Boot.</p>
-          </article>
-          <article class="service-card accent-card">
-            <div class="service-icon"><i class="fa-solid fa-window-maximize"></i></div>
-            <h3>Web</h3>
-            <p>Interfaces responsivas com HTML, CSS, JavaScript, TypeScript e React, priorizando usabilidade e leitura.</p>
-          </article>
-          <article class="service-card dark-card">
-            <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
-            <h3>Automacao</h3>
-            <p>Fluxos com n8n, Excel, Power BI e organizacao de dados para reduzir tarefas manuais e melhorar processos.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">GitHub</p>
-            <h2>Repositorios em movimento</h2>
-            <p class="section-intro">Carrossel atualizado automaticamente com meus repositorios publicos mais recentes.</p>
+        <div class="nav-actions">
+          <div
+            class="language-toggle"
+            role="group"
+            aria-label="Selecionar idioma"
+          >
+            <button
+              type="button"
+              class="language-option active"
+              data-language="pt-BR"
+            >
+              PT-BR</button
+            ><button
+              type="button"
+              class="language-option"
+              data-language="en-US"
+            >
+              EN-US
+            </button>
           </div>
-          <a class="btn btn-outline" href="https://github.com/BernardoApl?tab=repositories" target="_blank" rel="noopener">Ver todos no GitHub</a>
+          <button class="theme-toggle" type="button" aria-label="Alternar tema">
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+          </button>
+          <a
+            class="nav-download"
+            href="CV_main_PT-BR.pdf"
+            download
+            aria-label="Baixar curriculo"
+          >
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+          </a>
         </div>
+      </nav>
+    </header>
 
-        <div class="repo-box github-repo-showcase">
-          <div class="repo-carousel-viewport" aria-label="Carrossel infinito de repositorios do GitHub">
-            <div id="projects-container" class="repo-carousel-track" aria-live="polite">
-              <p class="empty-state" id="projects-placeholder">Carregando repositorios do GitHub...</p>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-shell">
+          <div
+            class="hero-photo-wrap hero-placeholder"
+            aria-label="Placeholder de foto com as iniciais de Joao Gabriel"
+          >
+            <span>JG</span>
+          </div>
+
+          <div class="hero-copy">
+            <p class="hello">Ola, eu sou</p>
+            <h1>João Gabriel</h1>
+            <p class="role">Estudante de Engenharia de Software</p>
+            <p class="summary">
+              Busco minha primeira oportunidade de estagio em tecnologia, com
+              interesse em Machine Learning, Engenharia de Dados e Computacao em
+              Nuvem.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact"
+                >Entrar em contato
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+              ></a>
+              <a class="btn btn-light" href="#projects"
+                >Ver projetos
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="social-rail" aria-label="Links sociais">
+            <a href="mailto:gabriel555467@gmail.com" aria-label="Email"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+            <a
+              href="https://github.com/WoaGabriel"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-a31132297/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container two-col">
+          <div>
+            <p class="section-kicker">Sobre mim</p>
+            <h2>
+              Formacao em software com interesse em dados, inteligencia
+              artificial e nuvem.
+            </h2>
+          </div>
+          <div class="about-text">
+            <article class="about-card">
+              <p id="about-description">
+                Sou estudante do 4o periodo de Engenharia de Software na PUC
+                Minas. Desenvolvo projetos academicos completos, do banco de
+                dados a interface, e busco aprofundar meus conhecimentos em
+                Machine Learning, Engenharia de Dados e Computacao em Nuvem.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services">
+        <div class="container">
+          <div class="section-title-center">
+            <p class="section-kicker">Atuacao</p>
+            <h2>Servicos e habilidades</h2>
+            <span></span>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card dark-card">
+              <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Desenvolvimento</h3>
+              <p>
+                Logica, orientacao a objetos e desenvolvimento de sistemas com
+                Java, C, C++, JavaScript e tecnologias web.
+              </p>
+            </article>
+            <article class="service-card accent-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-window-maximize"></i>
+              </div>
+              <h3>Dados</h3>
+              <p>
+                Modelagem e manipulacao de bancos de dados relacionais com
+                PostgreSQL e MySQL.
+              </p>
+            </article>
+            <article class="service-card dark-card">
+              <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+              <h3>Ferramentas</h3>
+              <p>
+                Git, GitHub, IntelliJ IDEA, VS Code e uso de agentes de IA como
+                apoio ao desenvolvimento de software.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">GitHub</p>
+              <h2>Repositorios em movimento</h2>
+              <p class="section-intro">
+                Carrossel atualizado automaticamente com meus repositorios
+                publicos mais recentes.
+              </p>
+            </div>
+            <a
+              class="btn btn-outline"
+              href="https://github.com/WoaGabriel?tab=repositories"
+              target="_blank"
+              rel="noopener"
+              >Ver todos no GitHub</a
+            >
+          </div>
+
+          <div class="repo-box github-repo-showcase">
+            <div
+              class="repo-carousel-viewport"
+              aria-label="Carrossel infinito de repositorios do GitHub"
+            >
+              <div
+                id="projects-container"
+                class="repo-carousel-track"
+                aria-live="polite"
+              >
+                <p class="empty-state" id="projects-placeholder">
+                  Carregando repositorios do GitHub...
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="experience" class="section experience">
-      <div class="container two-col">
-        <div>
-          <p class="section-kicker">Experiencias</p>
-          <h2>Vivencias academicas, tecnicas e profissionais.</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item current-job">
-            <span>Maio 2025 - Atual</span>
-            <h3>Ambientar</h3>
-            <p><strong>Engenheiro de Dados</strong> - Desenvolvimento de projetos reais de software e solucoes de dados. Atuacao com pipelines e integracoes de dados, modelagem e organizacao de bases, dashboards e indicadores, qualidade dos dados e automacoes para melhorar processos internos.</p>
-          </article>
-
-          <article class="timeline-item">
-            <span>2026 - Atual</span>
-            <h3>PUC Minas</h3>
-            <p><strong>Engenharia de Software</strong> - Desenvolvimento de projetos academicos, praticas de laboratorio, modelagem, front-end, backend e testes.</p>
-          </article>
-          <article class="timeline-item">
-            <span>Projetos academicos</span>
-            <h3>Desenvolvimento Web e Backend</h3>
-            <p>Participacao em sistemas com React, TypeScript, Java, Spring Boot e PostgreSQL, com foco em organizacao de codigo e entrega funcional.</p>
-          </article>
-          <article class="timeline-item">
-            <span>Automacao e dados</span>
-            <h3>Processos e Relatorios</h3>
-            <p>Experiencia com organizacao de dados, relatorios, Excel, Power BI e automacoes para diminuir tarefas repetitivas.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="cv" class="section cv-section">
-      <div class="container cv-layout">
-        <div class="cv-copy">
-          <p class="section-kicker">Curriculo</p>
-          <h2>Curriculo em PDF para visualizar e baixar.</h2>
-          <p>Escolha a versao PT-BR ou EN-US e confira o curriculo diretamente na pagina.</p>
-          <div class="cv-controls" role="group" aria-label="Selecionar idioma do curriculo">
-            <button type="button" class="cv-lang-btn active" data-cv-file="CV_main_PT-BR.pdf">PT-BR</button>
-            <button type="button" class="cv-lang-btn" data-cv-file="CV_main_EN-US.pdf">EN-US</button>
+      </section>
+      <section id="experience" class="section experience">
+        <div class="container two-col">
+          <div>
+            <p class="section-kicker">Projetos</p>
+            <h2>Experiencias academicas e tecnicas.</h2>
           </div>
-          <div class="cv-actions">
-            <a id="download-cv-pdf" class="btn btn-primary" href="CV_main_PT-BR.pdf" download>Baixar PDF</a>
-            <a id="open-cv-pdf" class="btn btn-outline" href="CV_main_PT-BR.pdf" target="_blank" rel="noopener">Abrir em nova guia</a>
+          <div class="timeline">
+            <article class="timeline-item current-job">
+              <span>Projeto academico</span>
+              <h3>RepairCar</h3>
+              <p>
+                Sistema de gestao para a oficina So Reparos, centralizando
+                ordens de servico, estoque de pecas e pagamentos. Tecnologias:
+                Java, Node.js e PostgreSQL.
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <span>Projeto academico</span>
+              <h3>DriveOld</h3>
+              <p>
+                Plataforma que digitaliza a relacao entre oficina e clientes,
+                oferecendo transparencia no acompanhamento da manutencao de
+                veiculos. Tecnologias: Java, HTML, CSS, JavaScript, MySQL e
+                Render.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <span>Em desenvolvimento</span>
+              <h3>StudyFlow</h3>
+              <p>
+                Aplicativo de produtividade para gerenciar tarefas, acompanhar
+                treinos e organizar estudos. Tecnologias planejadas: C#, React e
+                PostgreSQL.
+              </p>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="cv-preview">
-          <div class="preview-header">
-            <span id="cv-file-name">CV_main_PT-BR.pdf</span>
-            <span id="pdf-status">Pronto</span>
+      <section id="cv" class="section cv-section">
+        <div class="container cv-layout">
+          <div class="cv-copy">
+            <p class="section-kicker">Curriculo</p>
+            <h2>Curriculo em PDF para visualizar e baixar.</h2>
+            <p>
+              Escolha a versao PT-BR ou EN-US e confira o curriculo diretamente
+              na pagina.
+            </p>
+            <div
+              class="cv-controls"
+              role="group"
+              aria-label="Selecionar idioma do curriculo"
+            >
+              <button
+                type="button"
+                class="cv-lang-btn active"
+                data-cv-file="CV_main_PT-BR.pdf"
+              >
+                PT-BR
+              </button>
+              <button
+                type="button"
+                class="cv-lang-btn"
+                data-cv-file="CV_main_EN-US.pdf"
+              >
+                EN-US
+              </button>
+            </div>
+            <div class="cv-actions">
+              <a
+                id="download-cv-pdf"
+                class="btn btn-primary"
+                href="CV_main_PT-BR.pdf"
+                download
+                >Baixar PDF</a
+              >
+              <a
+                id="open-cv-pdf"
+                class="btn btn-outline"
+                href="CV_main_PT-BR.pdf"
+                target="_blank"
+                rel="noopener"
+                >Abrir em nova guia</a
+              >
+            </div>
           </div>
-          <iframe id="cv-pdf-frame" src="CV_main_PT-BR.pdf" title="Visualizacao do curriculo em PDF" loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
 
-    <section id="contact" class="section contact">
-      <div class="container contact-layout">
-        <div>
-          <p class="section-kicker">Contato</p>
-          <h2>Vamos conversar?</h2>
-          <p>Estou aberto a oportunidades de estagio, posicoes junior e projetos de desenvolvimento web, backend e automacao.</p>
-
-          <div class="contact-list">
-            <a href="mailto:b.lopes.software@gmail.com"><i class="fa-solid fa-envelope"></i> b.lopes.software@gmail.com</a>
-            <a href="tel:+5531971820224"><i class="fa-solid fa-phone"></i> +55 (31) 97182-0224</a>
-            <a href="https://github.com/BernardoApl" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/bernardo-lopes-3500b92b6/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <div class="cv-preview">
+            <div class="preview-header">
+              <span id="cv-file-name">CV_main_PT-BR.pdf</span>
+              <span id="pdf-status">Pronto</span>
+            </div>
+            <iframe
+              id="cv-pdf-frame"
+              src="CV_main_PT-BR.pdf"
+              title="Visualizacao do curriculo em PDF"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
+      </section>
 
-        <form id="contact-form" class="contact-form">
-          <label for="name">Nome</label>
-          <input id="name" name="name" type="text" autocomplete="name" required>
+      <section id="contact" class="section contact">
+        <div class="container contact-layout">
+          <div>
+            <p class="section-kicker">Contato</p>
+            <h2>Vamos conversar?</h2>
+            <p>
+              Estou aberto a oportunidades de estagio em desenvolvimento,
+              Machine Learning, Engenharia de Dados e Computacao em Nuvem.
+            </p>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
+            <div class="contact-list">
+              <a href="mailto:gabriel555467@gmail.com"
+                ><i class="fa-solid fa-envelope"></i> gabriel555467@gmail.com</a
+              >
+              <a href="tel:+5531983690402"
+                ><i class="fa-solid fa-phone"></i> +55 (31) 98369-0402</a
+              >
+              <a
+                href="https://github.com/WoaGabriel"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-github"></i> GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-a31132297/"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+              >
+            </div>
+          </div>
 
-          <label for="message">Mensagem</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <form id="contact-form" class="contact-form">
+            <label for="name">Nome</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+            />
 
-          <p id="contact-feedback" class="form-feedback" role="status" aria-live="polite"></p>
-          <button class="btn btn-primary" type="submit">Enviar mensagem <i class="fa-regular fa-paper-plane"></i></button>
-        </form>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <p
+              id="contact-feedback"
+              class="form-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <button class="btn btn-primary" type="submit">
+              Enviar mensagem <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>© 2026 João Gabriel. Todos os direitos reservados.</span>
+        <a href="#home">Voltar ao topo</a>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© 2026 Bernardo Augusto. Todos os direitos reservados.</span>
-      <a href="#home">Voltar ao topo</a>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
-
-
-
-

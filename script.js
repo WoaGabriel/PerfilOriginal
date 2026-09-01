@@ -1,9 +1,10 @@
 (() => {
-  const GH_ENDPOINT = "https://api.github.com/users/BernardoApl/repos?sort=updated&per_page=100";
-  const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/b.lopes.software@gmail.com";
+  const GH_ENDPOINT =
+    "https://api.github.com/users/WoaGabriel/repos?sort=updated&per_page=100";
+  const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/gabriel555467@gmail.com";
   const MAX_REPOS = 20;
-  const THEME_KEY = "bernardoPortfolioTheme";
-  const LANGUAGE_KEY = "bernardoPortfolioLanguage";
+  const THEME_KEY = "joaoPortfolioTheme";
+  const LANGUAGE_KEY = "joaoPortfolioLanguage";
 
   const qs = (selector) => document.querySelector(selector);
   const qsa = (selector) => Array.from(document.querySelectorAll(selector));
@@ -24,14 +25,18 @@
     if (toggle) {
       toggle.setAttribute(
         "aria-label",
-        nextTheme === "dark" ? "Alternar para modo claro" : "Alternar para modo escuro"
+        nextTheme === "dark"
+          ? "Alternar para modo claro"
+          : "Alternar para modo escuro",
       );
     }
   }
 
   function initTheme() {
     const saved = localStorage.getItem(THEME_KEY);
-    const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
+    const prefersDark = window.matchMedia?.(
+      "(prefers-color-scheme: dark)",
+    )?.matches;
     applyTheme(saved || (prefersDark ? "dark" : "light"));
 
     const toggle = qs(".theme-toggle");
@@ -41,37 +46,6 @@
       const isDark = document.body.classList.contains("theme-dark");
       applyTheme(isDark ? "light" : "dark");
     });
-  }
-
-  function initProfilePhoto() {
-    const photo = qs(".hero-photo");
-    if (!photo) return;
-
-    const candidates = [
-      "./bernardo-profile.png",
-      "./bernardo-profile.jpg",
-      "./perfil.png",
-      "./perfil.jpg",
-      "./profile.png",
-      "./profile.jpg"
-    ];
-    let current = 0;
-
-    function tryNextImage() {
-      current += 1;
-      if (current >= candidates.length) {
-        photo.classList.add("is-hidden");
-        return;
-      }
-      photo.src = candidates[current];
-    }
-
-    photo.addEventListener("load", () => {
-      photo.classList.remove("is-hidden");
-    });
-
-    photo.addEventListener("error", tryNextImage);
-    photo.src = candidates[0];
   }
 
   function initMenu() {
@@ -128,71 +102,103 @@
 
     const translations = {
       "pt-BR": {
-        title: "Bernardo Augusto | Portfolio",
-        nav: ["Home", "Sobre", "Servicos", "Projetos", "Experiencias", "Curriculo", "Contato"],
+        title: "João Gabriel | Portfolio",
+        nav: [
+          "Home",
+          "Sobre",
+          "Servicos",
+          "Projetos",
+          "Experiencias",
+          "Curriculo",
+          "Contato",
+        ],
         hello: "Ola, eu sou",
         role: "Estudante de Engenharia de Software",
-        summary: "Atuo como Engenheiro de Dados na Ambientar, desenvolvendo projetos reais de software, solucoes de dados e automacoes com foco em clareza, organizacao e impacto no processo.",
-        contactButton: "Entrar em contato <i class=\"fa-solid fa-arrow-right\" aria-hidden=\"true\"></i>",
-        projectsButton: "Ver projetos <i class=\"fa-solid fa-angle-right\" aria-hidden=\"true\"></i>",
+        summary:
+          "Busco minha primeira oportunidade de estagio em tecnologia, com interesse em Machine Learning, Engenharia de Dados e Computacao em Nuvem.",
+        contactButton:
+          'Entrar em contato <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>',
+        projectsButton:
+          'Ver projetos <i class="fa-solid fa-angle-right" aria-hidden="true"></i>',
         aboutKicker: "Sobre mim",
-        aboutTitle: "Perfil profissional em evolucao, com foco em tecnologia aplicada.",
-        aboutText: "Sou estudante de Engenharia de Software na PUC Minas e trabalho como Engenheiro de Dados na Ambientar desde maio de 2025. Atuo em projetos reais de software, criacao de pipelines, organizacao de bases, dashboards, automacoes e analise de dados para apoiar decisoes.",
+        aboutTitle:
+          "Formacao em software com interesse em dados, inteligencia artificial e nuvem.",
+        aboutText:
+          "Sou estudante do 4o periodo de Engenharia de Software na PUC Minas. Desenvolvo projetos academicos completos, do banco de dados a interface, e busco aprofundar meus conhecimentos em Machine Learning, Engenharia de Dados e Computacao em Nuvem.",
         servicesTitle: "Servicos e habilidades",
         projectsTitle: "Repositorios em movimento",
-        projectsIntro: "Carrossel atualizado automaticamente com meus repositorios publicos mais recentes.",
+        projectsIntro:
+          "Carrossel atualizado automaticamente com meus repositorios publicos mais recentes.",
         githubButton: "Ver todos no GitHub",
-        expKicker: "Experiencias",
-        expTitle: "Vivencias academicas, tecnicas e profissionais.",
+        expKicker: "Projetos",
+        expTitle: "Experiencias academicas e tecnicas.",
         cvKicker: "Curriculo",
         cvTitle: "Curriculo em PDF para visualizar e baixar.",
-        cvText: "Escolha a versao PT-BR ou EN-US e confira o curriculo diretamente na pagina.",
+        cvText:
+          "Escolha a versao PT-BR ou EN-US e confira o curriculo diretamente na pagina.",
         download: "Baixar PDF",
         open: "Abrir em nova guia",
         contactKicker: "Contato",
         contactTitle: "Vamos conversar?",
-        contactText: "Estou aberto a oportunidades de estagio, posicoes junior e projetos de desenvolvimento web, backend e automacao.",
+        contactText:
+          "Estou aberto a oportunidades de estagio em desenvolvimento, Machine Learning, Engenharia de Dados e Computacao em Nuvem.",
         nameLabel: "Nome",
         emailLabel: "Email",
         messageLabel: "Mensagem",
-        submit: "Enviar mensagem <i class=\"fa-regular fa-paper-plane\"></i>",
-        footer: "© 2026 Bernardo Augusto. Todos os direitos reservados.",
+        submit: 'Enviar mensagem <i class="fa-regular fa-paper-plane"></i>',
+        footer: "© 2026 João Gabriel. Todos os direitos reservados.",
         top: "Voltar ao topo",
-        cvFile: "CV_main_PT-BR.pdf"
+        cvFile: "CV_main_PT-BR.pdf",
       },
       "en-US": {
-        title: "Bernardo Augusto | Portfolio",
-        nav: ["Home", "About", "Services", "Projects", "Experience", "Resume", "Contact"],
+        title: "João Gabriel | Portfolio",
+        nav: [
+          "Home",
+          "About",
+          "Services",
+          "Projects",
+          "Experience",
+          "Resume",
+          "Contact",
+        ],
         hello: "Hi, I am",
         role: "Software Engineering Student",
-        summary: "I work as a Data Engineer at Ambientar, building real software projects, data solutions and automations focused on clarity, organization and process impact.",
-        contactButton: "Contact me <i class=\"fa-solid fa-arrow-right\" aria-hidden=\"true\"></i>",
-        projectsButton: "View projects <i class=\"fa-solid fa-angle-right\" aria-hidden=\"true\"></i>",
+        summary:
+          "I am seeking my first technology internship, with interests in Machine Learning, Data Engineering and Cloud Computing.",
+        contactButton:
+          'Contact me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>',
+        projectsButton:
+          'View projects <i class="fa-solid fa-angle-right" aria-hidden="true"></i>',
         aboutKicker: "About me",
-        aboutTitle: "A growing professional profile focused on applied technology.",
-        aboutText: "I am a Software Engineering student at PUC Minas and I have been working as a Data Engineer at Ambientar since May 2025. I work on real software projects, data pipelines, database organization, dashboards, automations and data analysis to support decisions.",
+        aboutTitle:
+          "Software education with an interest in data, artificial intelligence and cloud.",
+        aboutText:
+          "I am a fourth-semester Software Engineering student at PUC Minas. I develop end-to-end academic projects and am expanding my knowledge of Machine Learning, Data Engineering and Cloud Computing.",
         servicesTitle: "Services and skills",
         projectsTitle: "Repositories in motion",
-        projectsIntro: "Automatically updated carousel with my latest public GitHub repositories.",
+        projectsIntro:
+          "Automatically updated carousel with my latest public GitHub repositories.",
         githubButton: "See all on GitHub",
-        expKicker: "Experience",
-        expTitle: "Academic, technical and professional experience.",
+        expKicker: "Projects",
+        expTitle: "Academic and technical experience.",
         cvKicker: "Resume",
         cvTitle: "PDF resume ready to view and download.",
-        cvText: "Choose the PT-BR or EN-US version and view the resume directly on the page.",
+        cvText:
+          "Choose the PT-BR or EN-US version and view the resume directly on the page.",
         download: "Download PDF",
         open: "Open in new tab",
         contactKicker: "Contact",
         contactTitle: "Let's talk?",
-        contactText: "I am open to internship, junior roles and web, backend and automation projects.",
+        contactText:
+          "I am open to internship opportunities in development, Machine Learning, Data Engineering and Cloud Computing.",
         nameLabel: "Name",
         emailLabel: "Email",
         messageLabel: "Message",
-        submit: "Send message <i class=\"fa-regular fa-paper-plane\"></i>",
-        footer: "© 2026 Bernardo Augusto. All rights reserved.",
+        submit: 'Send message <i class="fa-regular fa-paper-plane"></i>',
+        footer: "© 2026 João Gabriel. All rights reserved.",
         top: "Back to top",
-        cvFile: "CV_main_EN-US.pdf"
-      }
+        cvFile: "CV_main_EN-US.pdf",
+      },
     };
 
     const setText = (selector, value) => {
@@ -241,7 +247,10 @@
       setText("#open-cv-pdf", t.open);
       setText("#contact .section-kicker", t.contactKicker);
       setText("#contact h2", t.contactTitle);
-      setText("#contact .contact-layout > div > p:not(.section-kicker)", t.contactText);
+      setText(
+        "#contact .contact-layout > div > p:not(.section-kicker)",
+        t.contactText,
+      );
       setText('label[for="name"]', t.nameLabel);
       setText('label[for="email"]', t.emailLabel);
       setText('label[for="message"]', t.messageLabel);
@@ -249,12 +258,16 @@
       setText(".footer-inner span", t.footer);
       setText(".footer-inner a", t.top);
 
-      const cvButton = qsa(".cv-lang-btn").find((button) => button.dataset.cvFile === t.cvFile);
+      const cvButton = qsa(".cv-lang-btn").find(
+        (button) => button.dataset.cvFile === t.cvFile,
+      );
       if (cvButton) cvButton.click();
     }
 
     buttons.forEach((button) => {
-      button.addEventListener("click", () => applyLanguage(button.dataset.language));
+      button.addEventListener("click", () =>
+        applyLanguage(button.dataset.language),
+      );
     });
     applyLanguage(localStorage.getItem(LANGUAGE_KEY) || "pt-BR");
   }
@@ -290,11 +303,15 @@
   function repoDescription(repo) {
     if (repo.description) return repo.description;
     const fallback = {
-      CarExpress: "Sistema de gerenciamento de veiculos com cadastro, consulta, atualizacao e remocao.",
+      CarExpress:
+        "Sistema de gerenciamento de veiculos com cadastro, consulta, atualizacao e remocao.",
       CV: "Curriculo profissional em LaTeX, com versoes em portugues e ingles.",
-      BernardoApl: "README de perfil profissional no GitHub."
+      WoaGabriel: "README de perfil profissional no GitHub.",
     };
-    return fallback[repo.name] || "Repositorio publico para estudos, praticas e evolucao tecnica.";
+    return (
+      fallback[repo.name] ||
+      "Repositorio publico para estudos, praticas e evolucao tecnica."
+    );
   }
 
   function escapeHtml(value) {
@@ -316,13 +333,18 @@
     if (language.includes("html")) return "fa-brands fa-html5";
     if (language.includes("css")) return "fa-brands fa-css3-alt";
     if (name.includes("car")) return "fa-solid fa-car-side";
-    if (name.includes("cv") || name.includes("curriculo")) return "fa-solid fa-file-lines";
-    if (name.includes("test") || name.includes("teste")) return "fa-solid fa-vial";
+    if (name.includes("cv") || name.includes("curriculo"))
+      return "fa-solid fa-file-lines";
+    if (name.includes("test") || name.includes("teste"))
+      return "fa-solid fa-vial";
     return "fa-brands fa-github";
   }
 
   function createRepoCard(repo, duplicate = false) {
-    const updated = new Intl.DateTimeFormat("pt-BR", { month: "short", year: "numeric" }).format(new Date(repo.pushed_at || repo.updated_at));
+    const updated = new Intl.DateTimeFormat("pt-BR", {
+      month: "short",
+      year: "numeric",
+    }).format(new Date(repo.pushed_at || repo.updated_at));
     const name = escapeHtml(repo.name);
     const description = escapeHtml(repoDescription(repo));
     const language = escapeHtml(repo.language || "GitHub");
@@ -330,7 +352,7 @@
     const icon = repoIcon(repo);
 
     return `
-      <a class="repo-card repo-carousel-card" href="${url}" target="_blank" rel="noopener" ${duplicate ? 'aria-hidden="true" tabindex="-1"' : ''}>
+      <a class="repo-card repo-carousel-card" href="${url}" target="_blank" rel="noopener" ${duplicate ? 'aria-hidden="true" tabindex="-1"' : ""}>
         <span class="repo-icon"><i class="${icon}" aria-hidden="true"></i></span>
         <span class="repo-content">
           <strong>${name}</strong>
@@ -351,16 +373,22 @@
     container.innerHTML = "";
 
     if (!repos.length) {
-      container.innerHTML = '<p class="empty-state" id="projects-placeholder">Nao foi possivel carregar os repositorios agora.</p>';
+      container.innerHTML =
+        '<p class="empty-state" id="projects-placeholder">Nao foi possivel carregar os repositorios agora.</p>';
       container.classList.remove("is-ready");
       return;
     }
 
     const cards = repos.map((repo) => createRepoCard(repo)).join("");
-    const duplicateCards = repos.map((repo) => createRepoCard(repo, true)).join("");
+    const duplicateCards = repos
+      .map((repo) => createRepoCard(repo, true))
+      .join("");
     container.innerHTML = cards + duplicateCards;
     container.style.setProperty("--repo-count", String(repos.length));
-    container.style.setProperty("--repo-duration", `${Math.max(22, repos.length * 3.8)}s`);
+    container.style.setProperty(
+      "--repo-duration",
+      `${Math.max(22, repos.length * 3.8)}s`,
+    );
     container.classList.add("is-ready");
   }
 
@@ -372,7 +400,11 @@
       repos = Array.isArray(data)
         ? data
             .filter((repo) => !repo.fork)
-            .sort((a, b) => new Date(b.pushed_at || b.updated_at) - new Date(a.pushed_at || a.updated_at))
+            .sort(
+              (a, b) =>
+                new Date(b.pushed_at || b.updated_at) -
+                new Date(a.pushed_at || a.updated_at),
+            )
             .slice(0, MAX_REPOS)
         : [];
       renderRepos();
@@ -394,17 +426,21 @@
         required: "Preencha todos os campos antes de enviar.",
         sending: "Enviando mensagem...",
         success: "Mensagem enviada com sucesso. Obrigado pelo contato!",
-        error: "Nao foi possivel enviar agora. Tente novamente em alguns instantes."
+        error:
+          "Nao foi possivel enviar agora. Tente novamente em alguns instantes.",
       },
       "en-US": {
         required: "Fill in every field before sending.",
         sending: "Sending message...",
         success: "Message sent successfully. Thanks for reaching out!",
-        error: "The message could not be sent right now. Try again in a moment."
-      }
+        error:
+          "The message could not be sent right now. Try again in a moment.",
+      },
     };
 
-    const getMessages = () => feedbackMessages[document.documentElement.lang] || feedbackMessages["pt-BR"];
+    const getMessages = () =>
+      feedbackMessages[document.documentElement.lang] ||
+      feedbackMessages["pt-BR"];
     const setFeedback = (message, state = "") => {
       if (!feedback) return;
       feedback.textContent = message;
@@ -436,7 +472,7 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json"
+            Accept: "application/json",
           },
           body: JSON.stringify({
             name,
@@ -445,8 +481,8 @@
             _replyto: email,
             _subject: "Contato pelo portfolio",
             _template: "table",
-            _captcha: "false"
-          })
+            _captcha: "false",
+          }),
         });
 
         if (!response.ok) throw new Error("Contact request failed");
@@ -464,7 +500,6 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     initTheme();
-    initProfilePhoto();
     initMenu();
     initActiveNav();
     initCvSwitcher();
@@ -473,6 +508,3 @@
     loadRepos();
   });
 })();
-
-
-
