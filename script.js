@@ -77,22 +77,42 @@
     const sections = qsa("main section[id]");
     const links = qsa(".nav-items a");
 
-    const update = () => {
-      const y = window.scrollY + 110;
-      sections.forEach((section) => {
-        const href = `#${section.id}`;
-        const link = links.find((item) => item.getAttribute("href") === href);
-        if (!link) return;
-        const top = section.offsetTop;
-        const bottom = top + section.offsetHeight;
-        if (y >= top && y < bottom) {
-          links.forEach((item) => item.classList.remove("active"));
-          link.classList.add("active");
-        }
+    const activateLink = (sectionId) => {
+      links.forEach((link) => {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === `#${sectionId}`,
+        );
       });
     };
 
+    const update = () => {
+      const pageBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 5;
+
+      // Garante que a última seção seja marcada ao chegar ao fim da página.
+      if (pageBottom && sections.length) {
+        activateLink(sections[sections.length - 1].id);
+        return;
+      }
+
+      const position = window.scrollY + 110;
+      let currentSection = sections[0]?.id;
+
+      sections.forEach((section) => {
+        if (position >= section.offsetTop) {
+          currentSection = section.id;
+        }
+      });
+
+      if (currentSection) {
+        activateLink(currentSection);
+      }
+    };
+
     window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
     update();
   }
 
